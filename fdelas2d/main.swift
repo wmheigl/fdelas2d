@@ -8,6 +8,10 @@
 
 import Foundation
 
+func cleanProjectDirectory() {
+    print("removing all products from previuos simulation")
+}
+
 if CommandLine.arguments.count < 2 {
     
     print("Elastic finite-difference modeling in two dimensions")
@@ -26,13 +30,15 @@ if CommandLine.arguments.count < 2 {
             
         case "clean":
             print("cleaning project directory")
+            cleanProjectDirectory()
         case "init":
-            print("initialzing project directory")
+            print("initializing project directory")
         case "run":
             print("running simulation")
         default:
             print("program arguments are:")
         }
     }
+    print()
 }
 
