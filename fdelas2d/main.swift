@@ -10,3 +10,22 @@ import Foundation
 
 print("Hello, World!")
 
+if CommandLine.arguments.count < 2 {
+    
+    print("Usage: fdelas2d [options]")
+    
+} else {
+    
+    for argument in CommandLine.arguments.dropFirst() {
+        
+        switch argument {
+            
+        case "init":
+            print("initialzing project directory")
+            
+        default:
+            print("program arguments are:")
+        }
+    }
+}
+
