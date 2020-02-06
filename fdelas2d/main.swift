@@ -8,11 +8,15 @@
 
 import Foundation
 
-print("Hello, World!")
-
 if CommandLine.arguments.count < 2 {
     
-    print("Usage: fdelas2d [options]")
+    print("Elastic finite-difference modeling in two dimensions")
+    print()
+    print("Usage: fdelas2d [clean | init | run]")
+    print()
+    print("clean" + "\t\t" + "cleans current project directory")
+    print("init" + "\t\t" + "initializes a new project")
+    print("run" + "\t\t\t" + "runs a simulation")
     
 } else {
     
@@ -20,9 +24,12 @@ if CommandLine.arguments.count < 2 {
         
         switch argument {
             
+        case "clean":
+            print("cleaning project directory")
         case "init":
             print("initialzing project directory")
-            
+        case "run":
+            print("running simulation")
         default:
             print("program arguments are:")
         }
