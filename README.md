@@ -2,4 +2,4 @@
 
 Elastic finite-difference modeling in 2 dimensions.
 
-This is my attempt to learn Swift trying to port a C code I write many years ago.
+This is my attempt to learn Swift by trying to port a C code I write many years ago.
