@@ -8,19 +8,11 @@
 
 import Foundation
 
-func cleanProjectDirectory() {
-    print("removing all products from previuos simulation")
-}
+let administrator = Administrator()
 
 if CommandLine.arguments.count < 2 {
     
-    print("Elastic finite-difference modeling in two dimensions")
-    print()
-    print("Usage: fdelas2d [clean | init | run]")
-    print()
-    print("clean" + "\t\t" + "cleans current project directory")
-    print("init" + "\t\t" + "initializes a new project")
-    print("run" + "\t\t\t" + "runs a simulation")
+    administrator.printUsageMessage()
     
 } else {
     
@@ -29,14 +21,14 @@ if CommandLine.arguments.count < 2 {
         switch argument {
             
         case "clean":
-            print("cleaning project directory")
-            cleanProjectDirectory()
+            administrator.cleanProjectDirectory()
         case "init":
-            print("initializing project directory")
+            administrator.initializeProject()
         case "run":
-            print("running simulation")
+            administrator.runSimulation()
         default:
-            print("program arguments are:")
+            print("unkown argument")
+            administrator.printUsageMessage()
         }
     }
     print()
